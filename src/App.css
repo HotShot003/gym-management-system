@@ -25,132 +25,191 @@ header p {
   word-spacing: 5px;
   color: whitesmoke;
 }
-/* Hero section styles */
+
+header:hover{
+  cursor: pointer;
+  background: #0095ff;
+  color: whitesmoke;
+  text-rendering: auto;
+  transition: 0.3s;
+}
 .hero {
+  min-height: 100vh;
+  position: relative;
+  background: url(/img3.jpg) rgba(0, 0, 0, 0.75);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 150px 0 70px 0;
+  padding-left: 7rem;
+}
+.hero .content {
+  display: flex;
   flex-direction: column;
-  background: url('/img3.jpg') no-repeat center center;
-  
-  background-size: cover; /* Ensure the image covers the entire section */
-  color: white;
-  min-height: 100vh; /* Full viewport height */
-  text-align: center;
-  padding: 0; /* Remove padding if not needed */
-  margin: 0; /* Remove margin if not needed */
-  box-sizing: border-box;
-  width: 100vw; /* Ensure full viewport width */
+  gap: 30px;
 }
-
-/* Ensure content is centered */
-.content {
-  max-width: 800px;
-  width: 100%;
-}
-
-/* Title styling */
-.title h1 {
+.hero .content .title {
+  color: whitesmoke;
   font-size: 4rem;
-  margin: 0;
-  font-weight: bold;
-  line-height: 1.2;
 }
-
-/* Subtitle styling */
-.sub-title p {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  font-weight: 300;
-  color: cadetblue;
+.hero .content .sub-title p {
+  font-weight: 400;
+  color: whitesmoke;
+  font-size: 1.8rem;
+  line-height: 45px;
 }
-
-/* Button styling */
-.buttons {
-  margin-top: 20px;
+.hero .content .sub-title p:last-child {
+  color: #0095ff;
 }
-
-.buttons button {
-  background-color: #2034ba; /* Button color */
-  border: none;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
+.hero .content .buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.hero .content .buttons button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #0095ff;
+  border: 1px solid #0095ff;
+  background: transparent;
+  transition: 0.3s;
+}
+.hero .content .buttons button:hover {
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  background: #0095ff;
+  color: whitesmoke;
+  transition: 0.3s;
 }
-
-.buttons button:hover {
-  background-color: #0e1857; /* Darker button color on hover */
-}
-
-/* Responsive styles */
 @media (max-width: 1050px) {
   .hero {
     padding-left: 2.5rem;
   }
-
   header {
     margin-left: 2.5rem;
   }
-
   .hero .content .title {
     font-size: 2.75rem;
   }
-
   .hero .content .sub-title p {
     font-size: 1.3rem;
     line-height: normal;
     margin-bottom: 5px;
   }
 }
-
 @media (max-width: 880px) {
   .hero {
     background-position: center;
   }
-
   .hero .content .title {
     font-size: 2.45rem;
   }
-
   .hero .content .sub-title p {
     font-size: 1.2rem;
   }
 }
-
 @media (max-width: 600px) {
   .hero {
     background-position: bottom;
   }
-
   .hero .content .title {
     font-size: 2.2rem;
   }
-
   .hero .content .sub-title p {
     font-size: 1rem;
   }
-
   .hero .content .buttons button {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 467px) {
   .hero {
     padding-left: 1rem;
   }
-
   header {
     margin-left: 1rem;
   }
-
   .hero .content .buttons {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
+  }
+}
+
+
+/* WorkOut Session Css  */
+
+.workout_session {
+  min-height: 100vh;
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0 50px 0;
+  gap: 75px;
+}
+.workout_session .wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.workout_session .wrapper h1 {
+  font-size: 2.2rem;
+  color: #111;
+}
+.workout_session .wrapper p {
+  font-size: 1.4rem;
+  color: gray;
+}
+.workout_session .wrapper .bootcamps {
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.workout_session .wrapper .bootcamps div {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 20px 10px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.workout_session .wrapper .bootcamps div:hover {
+  background: #111;
+  transition: 0.3s;
+}
+.workout_session .wrapper .bootcamps div:hover h4 {
+  color: #0095ff;
+  transition: 0.3s;
+}
+.workout_session .wrapper .bootcamps div:hover p {
+  color: whitesmoke;
+  transition: 0.3s;
+}
+@media (max-width: 1520px) {
+  .workout_session {
+    min-width: 100%;
+    padding: 50px 20px 50px 20px;
+    gap: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  .workout_session {
+    flex-direction: column;
+  }
+  .workout_session .wrapper h1 {
+    font-size: 1.6rem;
+  }
+  .workout_session .wrapper p {
+    font-size: 20px;
+  }
+  .workout_session .wrapper .bootcamps div h4 {
+    font-size: 20px;
+  }
+  .workout_session .wrapper .bootcamps div p {
+    font-size: 20px;
   }
 }
