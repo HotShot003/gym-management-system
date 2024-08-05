@@ -56,6 +56,15 @@ const WorkoutSessions = () => {
               balance, flexibility, and overall physical fitness.
             </p>
           </div>
+          <div>
+            <h4>Heavy Weight Lifting</h4>
+            <p>
+              Push your limits with our intense heavy weight lifting sessions.
+              Designed to build strength and muscle mass, these workouts focus
+              on compound movements and high-intensity training to help you
+              achieve your fitness goals.
+            </p>
+          </div>
         </div>
       </div>
     </section>

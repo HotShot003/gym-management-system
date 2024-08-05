@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from './components/Navbar';
 import WorkoutSessions from './components/WorkoutSession';
+import GallerySection from './components/GallerySection';
 
 const App = () =>{
   return (
@@ -11,6 +12,7 @@ const App = () =>{
     <Navbar/>
     <Hero/>
     <WorkoutSessions/>
+    <GallerySection/>
    </Router>
   )
 }
