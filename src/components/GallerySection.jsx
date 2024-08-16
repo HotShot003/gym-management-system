@@ -2,7 +2,16 @@
 import React from "react";
 
 function GallerySection() {
-  const gallery = ["/public/img1.webp","/public/img3.jpg", "/public/img5.jpg","/public/img2.jpg","/public/img4.jpg","/public/img6.jpg","/public/img7.jpg","/public/img8.jpg"];
+  const gallery = [
+    "/public/img1.webp",
+    "/public/img3.jpg",
+    "/public/img5.jpg",
+    "/public/img2.jpg",
+    "/public/img4.jpg",
+    "/public/img6.jpg",
+    "/public/img7.jpg",
+    "/public/img8.jpg",
+  ];
 
   return (
     <>
