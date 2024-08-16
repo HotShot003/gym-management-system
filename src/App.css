@@ -573,3 +573,109 @@ header:hover{
     width: 100%;
   }
 }
+.contact {
+  min-height: 800px;
+  background: url(/img8.jpg) rgba(0, 0, 0, 0.75);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 7rem;
+}
+
+.contact form {
+  background: whitesmoke;
+  width: 650px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.contact form div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.contact form div label {
+  font-weight: 500;
+  color: #0095ff; /* Matching the theme */
+}
+
+.contact form div input,
+.contact form div textarea {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.contact form div textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact form div input:focus,
+.contact form div textarea:focus {
+  outline: none;
+  border-color: #0095ff; /* Highlighting the theme */
+}
+
+.contact form button {
+  border: none;
+  color: whitesmoke;
+  background: #0095ff;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+  background: #0267af;
+  cursor: pointer;
+}
+
+@media (max-width: 1160px) {
+  .contact {
+    justify-content: center;
+    padding: 50px 20px;
+    background-position: left;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact form div {
+    gap: 5px;
+  }
+
+  .contact form button {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 30px 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    width: 100%;
+    padding: 15px;
+  }
+}

@@ -6,6 +6,7 @@ import WorkoutSessions from "./components/WorkoutSession";
 import GallerySection from "./components/GallerySection";
 import Pricing from "./components/Pricing";
 import About from "./components/AboutSection";
+import Contact from "./components/ContactUs";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <GallerySection />
       <Pricing/>
       <About/>
+      <Contact/>
     </Router>
   );
 };
