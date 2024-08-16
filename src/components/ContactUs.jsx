@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -13,27 +13,29 @@ const Contact = () => {
   const sendMail = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const templateParams = {
+      name,
+      email,
+      message,
+    };
+
     try {
-      const templateParams = {
-        from_name: name,
-        to_name: "Horizon Rise Gym", // You can customize this
-        from_email: email,
-        message: message,
-      };
       await emailjs.send(
-        "service_g7x1pyd", // Replace with your service ID
-        "template_ghyfp52", // Replace with your template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Use the service ID from .env
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Use the template ID from .env
         templateParams,
-        "JbZM7UNbRrQsyTt8A" // Replace with your user ID
+        import.meta.env.VITE_EMAILJS_USER_ID // Use the user ID from .env
       );
+
       setName("");
       setEmail("");
       setMessage("");
       toast.success("Message sent successfully!");
-      setLoading(false);
     } catch (error) {
-      setLoading(false);
       toast.error("Failed to send message.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,7 +49,6 @@ const Contact = () => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            required
           />
         </div>
         <div>
@@ -56,15 +57,14 @@ const Contact = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
         <div>
           <label>Message</label>
-          <textarea
+          <input
+            type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            required
           />
         </div>
         <button
