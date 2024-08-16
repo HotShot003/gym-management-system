@@ -489,7 +489,7 @@ header:hover{
 
 .about {
   padding: 100px 20px;
-  background-color: black;
+  background-color: #0a0a0a;
   color: white;
   text-align: center;
 }
@@ -677,5 +677,73 @@ header:hover{
   .contact form {
     width: 100%;
     padding: 15px;
+  }
+}
+/* src/components/Footer.css */
+.footer {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 100px; /* Adjust size as needed */
+}
+
+.footer-logo h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-info {
+  margin: 20px 0;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-socials {
+  margin: 20px 0;
+}
+
+.footer-socials a {
+  margin: 0 10px;
+}
+
+.footer-socials img {
+  width: 30px; /* Adjust size as needed */
+}
+
+/* Responsive design */
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-logo {
+    flex: 1;
+  }
+
+  .footer-info {
+    flex: 2;
+  }
+
+  .footer-socials {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

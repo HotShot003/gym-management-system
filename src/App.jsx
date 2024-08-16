@@ -7,6 +7,7 @@ import GallerySection from "./components/GallerySection";
 import Pricing from "./components/Pricing";
 import About from "./components/AboutSection";
 import Contact from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Pricing/>
       <About/>
       <Contact/>
+      <Footer/>
     </Router>
   );
 };
